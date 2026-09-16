@@ -1,0 +1,697 @@
+/* =========================
+   LANDING PAGE
+========================= */
+
+.landing_page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding: 35px 18px 60px;
+
+    background: #f2c4d5;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.landing_page_content {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing_intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.landing_page_header_one {
+    color: white;
+
+    font-size: clamp(22px, 5vw, 30px);
+    font-style: italic;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 3px 8px rgba(150, 80, 110, 0.18);
+}
+
+
+.landing_page_header {
+    margin: 0;
+
+    color: white;
+
+    font-family: comic;
+    font-size: clamp(60px, 15vw, 105px);
+
+    line-height: 0.75;
+
+    text-align: center;
+
+    letter-spacing: -4px;
+
+    text-shadow:
+        0 5px 0 rgba(255, 255, 255, 0.15),
+        0 8px 20px rgba(140, 70, 100, 0.18);
+}
+
+.landing_page_header span {
+    display: inline-block;
+
+    margin-top: 8px;
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================
+   CHARACTER
+========================= */
+
+.character_wrapper {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 15px;
+}
+
+
+.sonali {
+    position: relative;
+    z-index: 2;
+
+    width: auto;
+
+    height: min(48vh, 470px);
+
+    max-width: 90vw;
+
+    object-fit: contain;
+
+    animation: characterFloat 3.5s ease-in-out infinite;
+}
+
+
+/* soft glow underneath character */
+
+.character_glow {
+    position: absolute;
+
+    width: 180px;
+    height: 55px;
+
+    bottom: 10px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    filter: blur(18px);
+
+    animation: glowPulse 3.5s ease-in-out infinite;
+}
+
+
+@keyframes characterFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+}
+
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.8;
+    }
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.landing_page_subheader {
+    width: 100%;
+    max-width: 760px;
+
+    margin-top: 10px;
+
+    color: white;
+
+    font-size: clamp(16px, 4.2vw, 20px);
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    padding: 0 8px;
+
+    text-shadow:
+        0 2px 5px rgba(120, 60, 90, 0.12);
+}
+
+
+/* =========================
+   SUCCESS BADGE
+========================= */
+
+.success_badge {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    padding: 8px 15px;
+
+    background: white;
+
+    color: rgb(255, 120, 190);
+
+    border-radius: 14px;
+
+    font-weight: 800;
+
+    font-size: 0.9em;
+
+    box-shadow:
+        0 5px 15px rgba(150, 70, 110, 0.12);
+
+    transform: rotate(-1deg);
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.landing_page_button {
+    position: relative;
+
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    background: rgb(255, 150, 210);
+
+    color: white;
+
+    font-family: comic;
+
+    font-size: clamp(17px, 4.5vw, 21px);
+    font-weight: bold;
+
+    padding: 13px 20px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    outline: none;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 7px 0 rgb(224, 112, 174),
+        0 12px 25px rgba(150, 70, 110, 0.18);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background-color 0.15s ease;
+}
+
+
+.landing_page_button:hover {
+    background-color: rgb(255, 170, 220);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 0 rgb(224, 112, 174),
+        0 15px 28px rgba(150, 70, 110, 0.2);
+}
+
+
+.landing_page_button:active {
+    transform: translateY(4px);
+
+    box-shadow:
+        0 3px 0 rgb(224, 112, 174),
+        0 7px 15px rgba(150, 70, 110, 0.15);
+}
+
+
+.button_arrow {
+    font-size: 25px;
+
+    animation: littleHeart 1.4s ease-in-out infinite;
+}
+
+
+@keyframes littleHeart {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials {
+    display: flex;
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+.social_bubble {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(130, 60, 90, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.social_bubble:hover {
+    transform: translateY(-4px) rotate(-5deg);
+
+    background: white;
+}
+
+
+.landing_icon {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+
+    margin: 0;
+}
+
+
+/* =========================
+   FLYING CLOUDS
+========================= */
+
+.cloud {
+    position: absolute;
+
+    z-index: 1;
+
+    width: 105px;
+    height: 35px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+
+    animation: cloudFly linear infinite;
+}
+
+
+/* cloud body */
+
+.cloud::after {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    bottom: 0;
+
+    width: 90px;
+    height: 25px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 30px;
+}
+
+
+/* cloud bubbles */
+
+.cloud span {
+    position: absolute;
+
+    bottom: 8px;
+
+    display: block;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+}
+
+
+.cloud span:nth-child(1) {
+    width: 35px;
+    height: 35px;
+
+    left: 15px;
+}
+
+
+.cloud span:nth-child(2) {
+    width: 48px;
+    height: 48px;
+
+    left: 38px;
+    bottom: 5px;
+}
+
+
+.cloud span:nth-child(3) {
+    width: 30px;
+    height: 30px;
+
+    left: 72px;
+}
+
+
+.cloud_one {
+    top: 13%;
+    left: -130px;
+
+    animation-duration: 28s;
+}
+
+
+.cloud_two {
+    top: 30%;
+    left: -160px;
+
+    transform: scale(0.7);
+
+    animation-duration: 36s;
+
+    animation-delay: -12s;
+}
+
+
+.cloud_three {
+    top: 52%;
+    left: -140px;
+
+    transform: scale(1.15);
+
+    animation-duration: 42s;
+
+    animation-delay: -24s;
+}
+
+
+.cloud_four {
+    top: 72%;
+    left: -120px;
+
+    transform: scale(0.55);
+
+    animation-duration: 32s;
+
+    animation-delay: -7s;
+}
+
+
+@keyframes cloudFly {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(100vw + 250px));
+    }
+}
+
+
+/* =========================
+   FLOATING SPARKLES
+========================= */
+
+.cute_decor {
+    position: absolute;
+
+    z-index: 2;
+
+    color: white;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+    opacity: 0.7;
+
+    animation: sparkleFloat 3s ease-in-out infinite;
+}
+
+
+.decor_one {
+    top: 18%;
+    left: 10%;
+
+    animation-delay: 0s;
+}
+
+
+.decor_two {
+    top: 35%;
+    right: 9%;
+
+    animation-delay: 1s;
+
+    font-size: 30px;
+}
+
+
+.decor_three {
+    top: 55%;
+    left: 7%;
+
+    animation-delay: 1.8s;
+}
+
+
+.decor_four {
+    top: 68%;
+    right: 10%;
+
+    animation-delay: 0.5s;
+
+    font-size: 28px;
+}
+
+
+@keyframes sparkleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(15deg);
+        opacity: 0.9;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .landing_page {
+        padding:
+            10px
+            10px;
+    }
+
+
+    .landing_page_header_one {
+        font-size: 23px;
+    }
+
+
+    .landing_page_header {
+        font-size: clamp(58px, 17vw, 82px);
+
+        letter-spacing: -3px;
+    }
+
+
+    .character_wrapper {
+        margin-top: 10px;
+    }
+
+
+    .sonali {
+        height: 43vh;
+
+        max-height: 410px;
+
+        max-width: 92vw;
+    }
+
+
+    .landing_page_subheader {
+        font-size: 16px;
+
+        line-height: 1.55;
+
+        padding: 0 5px;
+    }
+
+
+    .success_badge {
+        font-size: 14px;
+
+        padding: 7px 10px;
+
+        line-height: 1.35;
+    }
+
+
+    .landing_page_button {
+        width: 92%;
+
+        max-width: 350px;
+
+        font-size: 17px;
+
+        padding: 10px 0px;
+    }
+
+
+    .socials {
+        margin-top: 20px;
+    }
+
+
+    .social_bubble {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .landing_icon {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    .cute_decor {
+        font-size: 19px;
+    }
+
+
+    .cloud {
+        opacity: 0.55;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .landing_page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .landing_page_header {
+        font-size: 57px;
+    }
+
+
+    .sonali {
+        height: 39vh;
+    }
+
+
+    .landing_page_subheader {
+        font-size: 15px;
+    }
+
+
+    .landing_page_button {
+        font-size: 16px;
+    }
+
+}

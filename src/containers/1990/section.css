@@ -1,0 +1,413 @@
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 90px 10px 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section_title_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+
+.section_small_title {
+    color: white;
+
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+
+    margin-bottom: 3px;
+
+    text-shadow:
+        0 3px 8px rgba(120, 60, 90, 0.15);
+}
+
+
+.section_title {
+    margin: 0;
+
+    color: white;
+
+    font-family: comic;
+
+    font-size: clamp(65px, 15vw, 100px);
+
+    line-height: 0.8;
+
+    letter-spacing: -3px;
+
+    text-shadow:
+        0 5px 0 rgba(255, 255, 255, 0.15),
+        0 8px 20px rgba(140, 70, 100, 0.18);
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================
+   POLAROIDS
+========================= */
+
+.polaroid_container {
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 38px;
+}
+
+
+.polaroid {
+    position: relative;
+
+    width: 46%;
+
+    max-width: 270px;
+
+    padding: 10px 10px 17px;
+
+    background: #fff;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 10px 25px rgba(100, 50, 70, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Left photo tilt */
+
+.polaroid_left {
+    transform: rotate(-5deg);
+}
+
+
+/* Right photo tilt */
+
+.polaroid_right {
+    transform: rotate(5deg);
+}
+
+
+/* Hover */
+
+.polaroid_left:hover {
+    transform: rotate(-2deg) translateY(-8px);
+
+    box-shadow:
+        0 18px 30px rgba(100, 50, 70, 0.25);
+}
+
+
+.polaroid_right:hover {
+    transform: rotate(2deg) translateY(-8px);
+
+    box-shadow:
+        0 18px 30px rgba(100, 50, 70, 0.25);
+}
+
+
+/* =========================
+   POLAROID IMAGE
+========================= */
+
+.polaroid_image_wrapper {
+    width: 100%;
+
+    aspect-ratio: 1 / 1.05;
+
+    overflow: hidden;
+
+    background: #f5e5eb;
+}
+
+
+.polaroid img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+
+.polaroid:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   POLAROID CAPTION
+========================= */
+
+.polaroid p {
+    margin: 10px 2px 0;
+
+    color: #5f3c4d;
+
+    font-family: comic;
+
+    font-size: clamp(15px, 4vw, 19px);
+
+    text-align: center;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   STORY CARD
+========================= */
+
+.section_story_card {
+    position: relative;
+
+    width: 92%;
+    max-width: 650px;
+
+    padding: 30px 24px 28px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 25px;
+
+    color: #684354;
+
+    box-shadow:
+        0 12px 30px rgba(100, 50, 70, 0.16);
+
+    text-align: center;
+}
+
+
+/* Small decorative border */
+
+.section_story_card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 2px dashed rgba(255, 150, 200, 0.45);
+
+    border-radius: 19px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   STORY CARD TITLE
+========================= */
+
+.section_story_card h2 {
+    position: relative;
+
+    margin: 0 0 15px;
+
+    color: rgb(255, 130, 190);
+
+    font-family: comic;
+
+    font-size: 30px;
+
+    line-height: 1;
+}
+
+
+/* =========================
+   STORY TEXT
+========================= */
+
+.section_story_card p {
+    position: relative;
+
+    margin: 10px auto;
+
+    max-width: 550px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #684354;
+}
+
+
+/* =========================
+   TAPE
+========================= */
+
+.story_card_tape {
+    position: absolute;
+
+    width: 75px;
+    height: 22px;
+
+    top: -11px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(255, 185, 215, 0.8);
+
+    box-shadow:
+        0 2px 4px rgba(100, 50, 70, 0.08);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .section {
+        min-height: 100vh;
+
+        padding:
+            75px
+            4px
+            90px;
+    }
+
+
+    .section_title_wrapper {
+        margin-bottom: 30px;
+    }
+
+
+    .section_small_title {
+        font-size: 16px;
+    }
+
+
+    .section_title {
+        font-size: 70px;
+    }
+
+
+    .polaroid_container {
+        gap: 10px;
+
+        width: 100%;
+
+        margin-bottom: 35px;
+    }
+
+
+    .polaroid {
+        width: 46%;
+
+        padding:
+            7px
+            7px
+            13px;
+    }
+
+
+    .polaroid p {
+        font-size: 14px;
+
+        margin-top: 8px;
+    }
+
+
+    .section_story_card {
+        width: 94%;
+
+        padding:
+            28px
+            18px
+            25px;
+
+        border-radius: 22px;
+    }
+
+
+    .section_story_card h2 {
+        font-size: 27px;
+    }
+
+
+    .section_story_card p {
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 380px) {
+
+    .section {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+
+    .polaroid_container {
+        gap: 7px;
+    }
+
+
+    .polaroid {
+        width: 47%;
+    }
+
+
+    .polaroid p {
+        font-size: 12px;
+    }
+
+
+    .section_story_card {
+        width: 95%;
+    }
+
+}

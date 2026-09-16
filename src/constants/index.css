@@ -1,0 +1,5 @@
+#root{
+    --headerHeight: 120px;
+    --backgroundColor: #fdc6ed;
+    --sectionPadding: max(30px, 50% - 660px)
+}

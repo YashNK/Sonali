@@ -1,0 +1,35 @@
+.header{
+    min-height: var(--headerHeight);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.288);
+    padding: 0px var(--sectionPadding);
+}
+.header_title{
+    font-size: 50px;
+    font-family: comic;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(110, 110, 110);
+}
+.header_links {
+    font-size: 20px;
+    font-family: comic;
+    color: white;
+    flex:1 1 10px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header_links > span {
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+.active_link {
+    font-size: 36px !important;
+    color: rgb(255, 150, 250);
+    text-shadow: 2px 2px 4px rgb(110, 110, 110);
+}
+.header_links > span:hover {
+    color: rgb(255, 187, 252);
+    text-shadow: 2px 2px 4px rgb(110, 110, 110);
+}
