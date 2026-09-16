@@ -1,4 +1,3 @@
-import React from "react";
 import "./section.css";
 
 import PhotoOne from "../../assets/images/1990-1.jpeg";

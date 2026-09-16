@@ -1,4 +1,3 @@
-import React from "react";
 import "./header.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Locations } from "../../constants";

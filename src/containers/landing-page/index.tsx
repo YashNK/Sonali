@@ -1,4 +1,3 @@
-import React from "react";
 import Sonali from "../../assets/images/sonali.png";
 import Instagram from "../../assets/images/instagram.webp";
 import Linkedin from "../../assets/images/linkedin.webp";

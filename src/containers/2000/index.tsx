@@ -1,5 +1,3 @@
-import React from "react";
-
 import PhotoOne from "../../assets/images/2000-1.jpeg";
 import PhotoTwo from "../../assets/images/2000-2.jpeg";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./main-container.css";
 // import { Header } from "../header";
 import { Outlet } from "react-router-dom";
