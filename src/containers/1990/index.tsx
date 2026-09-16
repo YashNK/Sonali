@@ -67,7 +67,7 @@ export const SectionOne = () => {
         <h2>Chapter One ♡</h2>
 
         <p>
-          Born in 1993, she quickly became the heart and soul of the Kamnani
+          Born in 1990s, she quickly became the heart and soul of the Kamnani
           family. Loved by everyone around her, she had the kind of presence
           that made her impossible not to adore. She was truly a heroine in the
           making, everyone's favourite, everyone's pride, and the star of the
